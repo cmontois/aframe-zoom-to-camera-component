@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Aframe Zoom to Camera Component</title>
+        <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+        <script src="https://rawgit.com/ngokevin/aframe-event-set-component/master/dist/aframe-event-set-component.min.js"></script>
+        <script src="https://unpkg.com/aframe-animation-component/dist/aframe-animation-component.min.js"></script>
+        <script src="../index.js"></script>
+    </head>
+    <body>
+        <a-scene>
+            <a-image
+                position="2 1.5 -5"
+                src="fox.jpeg"
+                width="1.5"
+                height="1"
+                event-set__1="_event: click; zoom-front-camera.zooming: true;"
+            ></a-image>
+
+            <a-sky color="#ECECEC"></a-sky>
+
+            <a-camera camera>
+                <a-cursor></a-cursor>
+            </a-camera>
+        </a-scene>
+    </body>
+</html>
